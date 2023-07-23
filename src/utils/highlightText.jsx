@@ -10,7 +10,7 @@ export const highlightText = (value, text) => {
                 part :
                 <>
                     <span style={{background: 'var(--red)', color: 'white', fontFamily: 'inherit'}}
-                          data-highlight={'highlight'}>{value}</span>{part}
+                          data-highlight={'true'}>{value}</span>{part}
                 </>
             }
         </>) : text}

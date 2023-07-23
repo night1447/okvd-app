@@ -1,20 +1,11 @@
-import data from '../src/assets/data.json'
-import List from "./components/List/List.jsx";
-import Container from "./components/UI/Container/Container.jsx";
-import Search from "./components/Search/Search.jsx";
-import {useState} from "react";
+import SearchHelper from "./components/SearchHelper/SearchHelper.jsx";
+import Page from "./components/UI/Page/Page.jsx";
 
 const App = () => {
-    const [searchValue, setSearchValue] = useState('');
-
-    const changeSearchValueHandler = (value) => {
-        setSearchValue(value);
-    }
     return (
-        <Container>
-            <Search  onSearch={changeSearchValueHandler}/>
-            <List list={data} searchValue={searchValue} active={true}/>
-        </Container>
+        <Page title={'Cписок выбора ОКВЭД'}>
+            <SearchHelper/>
+        </Page>
     );
 }
 
