@@ -1,0 +1,18 @@
+.item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 24px;
+}
+
+.active {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+
+.disable {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}

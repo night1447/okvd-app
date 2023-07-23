@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.active {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+
+.disable {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}

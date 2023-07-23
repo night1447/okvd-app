@@ -1,0 +1,56 @@
+.inner {
+  display: flex;
+  align-items: center;
+  background: var(--papaya-whip);
+  padding: 20px 80px 20px 20px;
+  gap: 40px;
+}
+
+.description {
+  margin-top: 30px;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.select {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background-color: white;
+  outline: 3px solid var(--pink);
+  border-radius: 50%;
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    left: 50%;
+    top: 50%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--black);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+
+  &::before {
+    transform: translate(-85%, 100%) rotate(45deg);
+  }
+
+  &::after {
+    width: 28px;
+    transform: translate(-20%, -20%) rotate(-45deg);
+  }
+
+  &.active {
+    &::before, &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
